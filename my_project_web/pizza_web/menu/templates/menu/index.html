@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'menu/my_styles.css' %}">
+    <meta charset="UTF-8">
+    <title>Pizza menu</title>
+</head>
+
+<body>
+    
+    <div class="title">
+        <h1>The pizzas</h1>
+    </div>
+
+    <div class="menu_list">
+        {% for pizza in pizzas %}
+            <div class="menu_list_item">
+                <span class="menu_list_title">{{pizza.pizza_name}}</span>
+                <span class="price">{{pizza.price | floatformat:2}}$</span>
+                <span class="ingredients_menu">{{pizza.ingredients}}</span>
+                {% if pizza.vegetarian %}
+                <span class="vegetarian">VEGETARIAN</span>
+                {% endif %}
+            </div>
+            {% endfor %}
+    </div>
+    
+</body>
+
+</html>

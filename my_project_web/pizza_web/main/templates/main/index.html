@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>jhonny pizza</title>
+    <link rel="stylesheet" href="{% static 'main/style_main.css' %}">
+    
+</head>
+
+<body>
+
+    <div class="my_logo">
+        <h1>jhonny pizza</h1>
+    </div>
+
+    <div class="way">
+        <a href="{% url 'menu:index' %}">View the menu</a>
+    </div>
+    
+    <div class="biography">
+        <h2><< The best pizza >></h2>
+    </div>
+     
+</body>
+</html>
